@@ -16,10 +16,10 @@ import OrdersPage     from './pages/OrdersPage.jsx'
 import SearchPage     from './pages/SearchPage.jsx'
 import NotFoundPage   from './pages/NotFoundPage.jsx'
 
-// Layout
-import Navbar  from './components/layout/Navbar.jsx'
-import Footer  from './components/layout/Footer.jsx'
-import Toast   from './components/ui/Toast.jsx'
+// Layout - FIXED IMPORTS
+import Navbar from './components/layout/Navbar.jsx'
+import { Footer } from './components/layout/Footer.jsx'  // Named import, not default
+import { Toast } from './components/ui/Toast.jsx'        // Named import, not default
 
 // ─── API base ────────────────────────────────────────────────────────────────
 export const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000/api'

@@ -88,7 +88,7 @@ DATABASES = {
 
 
 # ─── Auth ───────────────────────────────────────────────────────────────────
-AUTH_USER_MODEL = 'store.User'
+AUTH_USER_MODEL = 'core.User'
  
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
@@ -203,12 +203,12 @@ LOGGING = {
 }
  
 # ─── Cache (Redis) ────────────────────────────────────────────────────────────
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.redis.RedisCache',
-        'LOCATION': config('REDIS_URL', default='redis://127.0.0.1:6379/1'),
-    }
-}
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django.core.cache.backends.redis.RedisCache',
+#         'LOCATION': config('REDIS_URL', default='redis://127.0.0.1:6379/1'),
+#     }
+# }
 SESSION_ENGINE        = 'django.contrib.sessions.backends.cache'
 SESSION_CACHE_ALIAS   = 'default'
  
